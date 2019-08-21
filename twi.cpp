@@ -356,6 +356,7 @@ bool USI_TWI_Start_Read_Write( unsigned char *msg, unsigned char msgSize)
           USI_TWI_state.errorState = USI_TWI_NO_ACK_ON_ADDRESS;
         else
           USI_TWI_state.errorState = USI_TWI_NO_ACK_ON_DATA;
+	   USI_TWI_Master_Stop();
         return (FALSE);
       }
 	  
